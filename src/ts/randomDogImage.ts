@@ -1,7 +1,7 @@
 import { IRandom } from "./modules/IRandom";
 import { get } from "./serviceBase";
 
-let randomImagesContainer = document.getElementById("randomImages");
+const randomImagesContainer = document.getElementById("randomImages");
 
 export const randomDogImage = async (): Promise<string> => {
   const url = "https://dog.ceo/api/breeds/image/random";
@@ -10,12 +10,13 @@ export const randomDogImage = async (): Promise<string> => {
   createHtml(data.message);
   return data.message;
 };
-const createHtml = (dog:string) => {
+const createHtml = (dog: string) => {
   if (randomImagesContainer) {
     let img = document.createElement("img");
     img.src = dog;
     img.alt = "bild på hund";
     console.log(dog);
+    console.log("hej");
     
 
     randomImagesContainer.appendChild(img);
