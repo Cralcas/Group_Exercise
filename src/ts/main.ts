@@ -50,4 +50,21 @@ humBtn?.addEventListener("click", () => {
         menuList.className = "test"
         menu?.appendChild(menuList)
     }
+
+    
 })
+
+const scroll = () => {
+  if(window.scrollY > 0 ){
+    const humBtn = document.getElementById("hum-btn");
+    const menu = document.getElementById("menu")
+    if(humBtn && menu){
+      humBtn.style.display = "none";
+      menu.style.display = "none";
+    }
+  }
+}
+
+window.addEventListener("scroll", scroll);
+
+scroll()
