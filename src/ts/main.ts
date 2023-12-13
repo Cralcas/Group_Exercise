@@ -2,6 +2,8 @@ import "./../scss/style.scss";
 import {randomDogImage} from "./randomDogImage";
 import {ICocktail} from "./models/ICocktail";
 import {searchCocktail} from "./services/cocktailService";
+import { randomJoke } from "./randomJoke";
+
 
 document.getElementById("randomBtn")?.addEventListener("click", () => {
   randomDogImage();
@@ -54,3 +56,8 @@ humBtn?.addEventListener("click", () => {
         menu?.appendChild(menuList)
     }
 })
+
+document.getElementById("joke--btn")?.addEventListener("click",() => {
+  randomJoke();
+});
+
