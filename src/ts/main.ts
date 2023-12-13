@@ -1,5 +1,5 @@
 import "./../scss/style.scss";
-import {randomDogImage} from "./randomDogImage";
+import {randomDogImage, searchDog} from "./services/randomDogImage";
 import {ICocktail} from "./models/ICocktail";
 import {searchCocktail} from "./services/cocktailService";
 import { randomJoke } from "./randomJoke";
@@ -7,8 +7,12 @@ import { randomJoke } from "./randomJoke";
 
 document.getElementById("randomBtn")?.addEventListener("click", () => {
   randomDogImage();
-});
+})
 
+document.getElementById("searchBtn")?.addEventListener("click", (e) => {
+  e.preventDefault();
+  searchDog();
+})
 document
   .getElementById("searchForm")
   ?.addEventListener("submit", async (e: SubmitEvent) => {

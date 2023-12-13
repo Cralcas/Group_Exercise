@@ -64,9 +64,56 @@ html section {
   
 }
 
-.dog {
-  width: 350px;
-  height: 400px;
+#randomImage {
+  height: 100vh;
+  width: 100%;
+  @include mx.center;
+  flex-direction: column;
+  background-color: rgb(172, 183, 187);
+
+  #searchDog {
+    margin: 30px 0;
+    @include mx.center;
+    flex-direction: row;
+    gap: 1rem;
+    width: 70%;
+    #userInput {
+      width: 70%;
+      @include mx.button(24px, none, 5px,  white, black);
+    }
+    #searchBtn {
+      width: 20%;
+      @include mx.button(24px, none, 10px,  black, white);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  #btnContainer {
+    #randomBtn {
+      font-size: 24px;
+      font-family: sans-serif;
+      padding: 10px 30px;
+      @include mx.button (24px, none, 10px, black, white);
+      margin-bottom: 30px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .container {
+    height: 100%;
+    .dog {
+      height: 70vh;
+      border-radius: 10px;
+    }
+    .dogName {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
 }
 
 #cocktails {

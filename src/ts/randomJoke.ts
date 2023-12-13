@@ -1,5 +1,5 @@
 import { IJoke } from "./modules/IJoke";
-import { get } from "./serviceBase";
+import { get } from "./services/serviceBase";
 
 export const randomJoke = async ():Promise <IJoke> => {
     const url =  "https://official-joke-api.appspot.com/random_joke";

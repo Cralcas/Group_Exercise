@@ -1,3 +1,3 @@
-export interface IRandom {
+export interface IDog {
     message: string;
 }

@@ -3,3 +3,11 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin button ($size, $border, $radius, $bgcolor, $color){
+    font-size: $size;
+    border: $border;
+    border-radius: $radius;
+    background-color: $bgcolor;
+    color: $color;
+}
