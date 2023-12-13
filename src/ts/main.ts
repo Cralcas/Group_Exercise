@@ -16,10 +16,13 @@ document
       document.getElementById("searchCocktail") as HTMLInputElement
     ).value;
 
-    const cocktails = await searchCocktail(searchText);
-
-    createCocktailHtml(cocktails);
-    console.log(cocktails);
+    if (searchText) {
+      const cocktails = await searchCocktail(searchText);
+      createCocktailHtml(cocktails);
+      console.log(cocktails);
+    } else {
+      alert("Sök efter en cocktail");
+    }
   });
 
 const createCocktailHtml = (cocktails: ICocktail[]) => {

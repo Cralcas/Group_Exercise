@@ -57,7 +57,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 20px 20px;
+}
+
+.cocktailsHeader {
+  font-size: 3rem;
+  padding-top: 50px;
 }
 
 #cocktailBtn {
@@ -67,20 +72,28 @@
 
 #drinks {
   width: 300px;
+  height: fit-content;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  overflow: scroll;
+  overflow: hidden;
+  overflow-y: scroll;
   text-align: center;
   gap: 5px 20px;
 }
 
 #drinkBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 150px;
 }
 
 #drinkimage {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  border: 3px solid black;
+  border-radius: 5px;
 }
 .hum {
     margin: 0%;
