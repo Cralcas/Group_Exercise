@@ -1,0 +1,38 @@
+.hum {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 9rem;
+    height: 9rem;
+    background-color: black;
+    position: fixed;
+    left: 80%;
+    top: 20%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    &__line{
+        margin: 0%;
+        padding: 0%;
+        width: 3rem;
+        height: 0.2rem;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.hum:hover {
+    transform: scale(0.9);
+}
+
+
+.test {
+    width: 20rem;
+    height: 30rem;
+    background-color: black;
+    position: fixed;
+    left: 72%;
+    top: 20%;
+}
