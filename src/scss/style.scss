@@ -33,12 +33,23 @@ html section {
       font-family: sans-serif;
       font-size: 4rem;
       font-weight: 800;
+
+      @media screen and (max-width: 427px) {
+        font-size: 3rem;
+      }
     }
     &__line {
       height: 5px;
       border: none;
       border-radius: 20px;
       background: linear-gradient(rgb(251, 255, 0), rgb(143, 146, 0));
+    }
+
+    @media screen and (max-width: 427px) {
+      max-width: 347px;
+    }
+    @media screen and (max-width: 820px) {
+      width: 446px;
     }
   }
   
@@ -52,16 +63,21 @@ html section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../../public/shot-astonished-bearded-redhead-man-posing-beach.jpg);
     background-size: cover;
+
+    @media screen and (max-width: 427px) {
+      background-position: 80% 20%;
+    }
+    @media screen and (max-width: 1030px) {
+      background-position: 80% 20%;
+    }
   }
-  &:hover::before {
-    animation: mymove 5s infinite;
+
+  @media screen and (max-width: 427px) {
+    align-items: start;
   }
-  @keyframes mymove {
-    0% {transform: rotate(0deg);}
-    50% {transform: rotate(180deg);}
-    100% {transform: rotate(360deg);}
+  @media screen and (max-width: 820px) {
+    justify-content: flex-start;
   }
-  
 }
 
 #randomImage {
@@ -132,8 +148,19 @@ html section {
 }
 
 #cocktailBtn {
-  width: 40px;
-  height: 20px;
+  width: 120px;
+  height: 40px;
+  @include mx.button(1.3rem, black solid 2px, 10px, rgb(241, 241, 19), black);
+}
+#cocktailBtn:hover {
+  cursor: pointer;
+}
+#searchCocktail {
+  width: 200px;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: black solid 2px;
 }
 
 #drinks {
@@ -219,6 +246,7 @@ html section {
     border-radius: 10px;
 
     &:hover {
+      cursor: pointer;
       background-color: lightgrey;
     }
   }
