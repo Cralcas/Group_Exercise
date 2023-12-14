@@ -1,7 +1,8 @@
 import "./../scss/style.scss";
-import {randomDogImage} from "./randomDogImage";
-import {ICocktail} from "./models/ICocktail";
-import {searchCocktail} from "./services/cocktailService";
+import { randomDogImage } from "./randomDogImage";
+import { ICocktail } from "./models/ICocktail";
+import { searchCocktail } from "./services/cocktailService";
+import { createHtmlLinks } from "./services/createHtmlLinks";
 
 document.getElementById("randomBtn")?.addEventListener("click", () => {
   randomDogImage();
@@ -42,29 +43,46 @@ const createCocktailHtml = (cocktails: ICocktail[]) => {
   }
 };
 
-const humBtn = document.getElementById("hum-btn")
+// Hamburgermeny
+let isMenuCreated: boolean = false;
+let menuList: HTMLElement; // skappar variabler här för att jag kommer använda de i olika kodeblock
+const menu = document.getElementById("menu");
+const humBtn = document.getElementById("hum-btn");
+const humLine1 = document.getElementById("humLine1");
+const humLine2 = document.getElementById("humLine2");
+const humLine3 = document.getElementById("humLine3");
 humBtn?.addEventListener("click", () => {
-    if(humBtn) {
-        const menu = document.getElementById("menu")
-        const menuList = document.createElement("div")
-        menuList.className = "test"
-        menu?.appendChild(menuList)
-    }
+  if (humBtn && !isMenuCreated) {
+    // gör en toggle med if
+    menuList = document.createElement("div");
+    menuList.id = "menuList";
+    menuList.className = "menuList";
+    menu?.appendChild(menuList);
+    isMenuCreated = true;
 
-    
-})
-
+    humLine1?.classList.add("cross1");
+    humLine2?.classList.add("cross2");
+    humLine3?.classList.add("cross3");
+    humBtn.classList.add("removeGap");
+    createHtmlLinks();
+  } else {
+    menuList?.remove();
+    isMenuCreated = false;
+    humLine1?.classList.remove("cross1");
+    humLine2?.classList.remove("cross2");
+    humLine3?.classList.remove("cross3");
+    humBtn.classList.remove("removeGap");
+  }
+});
+// funktion som gör att när man scrollar så görsvinner meny
 const scroll = () => {
-  if(window.scrollY > 0 ){
-    const humBtn = document.getElementById("hum-btn");
-    const menu = document.getElementById("menu")
-    if(humBtn && menu){
-      humBtn.style.display = "none";
-      menu.style.display = "none";
+  if (menu) {
+    if (window.scrollY > 0) {
+      menu.classList.add("scroll");
+    } else {
+      menu.classList.remove("scroll");
     }
   }
-}
-
+};
+// lägger till en eventListner för skroll händelsen
 window.addEventListener("scroll", scroll);
-
-scroll()

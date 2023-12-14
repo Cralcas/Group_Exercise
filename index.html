@@ -1,39 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <title>Lasses sida</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lasses sida</title>
-</head>
-
-<body>
-  <header id="menu">
-    <button id="hum-btn" class="hum">
-      <div id="humLine1" class="hum__line"></div>
-      <div id="humLine2" class="hum__line"></div>
-      <div id="humLine3" class="hum__line"></div>
-    </button>
-  </header>
-  <section class="hero">
-    <div class="hero__info">
-      <h1 class="hero__info__title">Livet leker, Lasse steker</h1>
-      <hr class="hero__info__line">
-    </div>
-  </section>
-  <section id="randomImage">
-    <button id="randomBtn">Dog</button>
-  </section>
-  <section id="cocktails">
-    <h2 class="cocktailsHeader">Sök efter cocktail</h2>
-    <form id="searchForm">
-      <input type="text" id="searchCocktail">
-      <button id="cocktailBtn">Sök</button>
-    </form>
-    <div id="drinks"></div>
-  </section>
-  <script type="module" src="/src/ts/main.ts"></script>
-</body>
-
+  <body>
+    <header id="menu">
+      <button id="hum-btn" class="hum">
+        <div id="humLine1" class="hum__line"></div>
+        <div id="humLine2" class="hum__line"></div>
+        <div id="humLine3" class="hum__line"></div>
+      </button>
+    </header>
+    <section class="hero" id="hero">
+      <div class="hero__info">
+        <h1 class="hero__info__title">Livet leker, Lasse steker</h1>
+        <hr class="hero__info__line" />
+      </div>
+    </section>
+    <section id="randomImage">
+      <button id="randomBtn">Dog</button>
+    </section>
+    <section id="cocktails">
+      <h2 class="cocktailsHeader">Sök efter cocktail</h2>
+      <form id="searchForm">
+        <input type="text" id="searchCocktail" />
+        <button id="cocktailBtn">Sök</button>
+      </form>
+      <div id="drinks"></div>
+    </section>
+    <script type="module" src="/src/ts/main.ts"></script>
+  </body>
 </html>
