@@ -52,7 +52,7 @@ html section {
       width: 446px;
     }
   }
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -61,7 +61,7 @@ html section {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../../public/shot-astonished-bearded-redhead-man-posing-beach.jpg);
+      url(../../public/shot-astonished-bearded-redhead-man-posing-beach.jpg);
     background-size: cover;
 
     @media screen and (max-width: 427px) {
@@ -95,11 +95,11 @@ html section {
     width: 70%;
     #userInput {
       width: 70%;
-      @include mx.button(24px, none, 5px,  white, black);
+      @include mx.button(24px, none, 5px, white, black);
     }
     #searchBtn {
       width: 20%;
-      @include mx.button(24px, none, 10px,  black, white);
+      @include mx.button(24px, none, 10px, black, white);
 
       &:hover {
         cursor: pointer;
@@ -111,7 +111,7 @@ html section {
       font-size: 24px;
       font-family: sans-serif;
       padding: 10px 30px;
-      @include mx.button (24px, none, 10px, black, white);
+      @include mx.button(24px, none, 10px, black, white);
       margin-bottom: 30px;
 
       &:hover {
@@ -188,43 +188,93 @@ html section {
   border: 3px solid black;
   border-radius: 5px;
 }
+
+// Hamburgermeny
 .hum {
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 9rem;
+  height: 9rem;
+  background-color: rgb(123, 134, 62);
+  position: fixed;
+  left: 10%;
+  top: 15%;
+  transition: transform 0.3s ease;
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  &__line {
     margin: 0%;
     padding: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 9rem;
-    height: 9rem;
-    background-color: black;
-    position: fixed;
-    left: 80%;
-    top: 20%;
+    width: 3rem;
+    height: 0.2rem;
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 18rem;
+  height: 30rem;
+  background-color: rgb(123, 134, 62);
+  position: fixed;
+  left: 10%;
+  top: 15%;
+  z-index: 9;
+  transition: transform 0.3s ease;
+  animation-name: dropDown;
+  animation-duration: 1s;
+  &__link {
+    text-decoration: none;
     transition: transform 0.3s ease;
-    cursor: pointer;
-    &__line{
-        margin: 0%;
-        padding: 0%;
-        width: 3rem;
-        height: 0.2rem;
-        background-color: rgb(255, 255, 255);
-    }
+    font-weight: bold;
+    margin-left: 2rem;
+    color: white;
+    font-size: 1.5rem;
+  }
 }
-
-.hum:hover {
-    transform: scale(0.9);
-}
-
-
-.test {
-    width: 20rem;
+@keyframes dropDown {
+  0% {
+    width: 0rem;
+    height: 0rem;
+  }
+  100% {
+    width: 18rem;
     height: 30rem;
-    background-color: black;
-    position: fixed;
-    left: 72%;
-    top: 20%;
+  }
+}
+.removeGap {
+  display: flex;
+  gap: 0rem;
+}
+.hum:hover {
+  transform: scale(0.9);
+}
+.scroll {
+  display: none;
+  animation-name: up;
+  animation-duration: 1s;
+}
+
+.cross1 {
+  transform: rotate(45deg);
+}
+
+.cross3 {
+  transform: rotate(-45deg);
+}
+
+.cross2 {
+  display: none;
 }
 
 #joke {
