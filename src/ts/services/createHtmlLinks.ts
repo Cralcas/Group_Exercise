@@ -4,6 +4,7 @@ export const createHtmlLinks = () => {
     const linkToRandomImage = document.createElement("a");
     const linkToDrinks = document.createElement("a");
     const linkToHero = document.createElement("a");
+    const linkToCocktails = document.createElement("a");
 
     linkToRandomImage.setAttribute("href", "#randomImage");
     linkToRandomImage.innerText = " Hundar";
@@ -20,8 +21,14 @@ export const createHtmlLinks = () => {
     linkToHero.className = "menuList__link";
     linkToHero.classList.add("bi-house");
 
+    linkToCocktails.setAttribute("hreef", "#cocktails");
+    linkToCocktails.innerText = " Cocktails";
+    linkToCocktails.className = "menuList__link";
+    linkToCocktails.classList.add("bi-cup-straw");
+
     menuList?.appendChild(linkToHero);
     menuList?.appendChild(linkToRandomImage);
+    menuList?.appendChild(linkToCocktails);
     menuList?.appendChild(linkToDrinks);
   }, 1000);
 };
