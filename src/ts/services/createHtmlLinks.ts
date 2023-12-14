@@ -21,7 +21,7 @@ export const createHtmlLinks = () => {
     linkToHero.className = "menuList__link";
     linkToHero.classList.add("bi-house");
 
-    linkToCocktails.setAttribute("hreef", "#cocktails");
+    linkToCocktails.setAttribute("href", "#cocktails");
     linkToCocktails.innerText = " Cocktails";
     linkToCocktails.className = "menuList__link";
     linkToCocktails.classList.add("bi-cup-straw");
