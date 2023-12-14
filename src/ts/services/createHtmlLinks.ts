@@ -11,10 +11,10 @@ export const createHtmlLinks = () => {
     linkToRandomImage.className = "menuList__link";
     linkToRandomImage.classList.add("bi-balloon-heart");
 
-    linkToDrinks.setAttribute("href", "#drinks");
-    linkToDrinks.innerText = " Drinks";
+    linkToDrinks.setAttribute("href", "#joke--title");
+    linkToDrinks.innerText = " Joks";
     linkToDrinks.className = "menuList__link";
-    linkToDrinks.classList.add("bi-cup-straw");
+    linkToDrinks.classList.add("bi-journal");
 
     linkToHero.setAttribute("href", "#hero");
     linkToHero.innerText = " Start sidan";
